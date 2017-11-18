@@ -3,7 +3,7 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var normalizePort = require("normalize-port");
-
+var port = normalizePort(process.env.PORT || "8081");
 // TODO: Keeping track of grids:
 // Make a nested loop to construct arrays to keep track of polarity every time the grid constructor gets a call
 
